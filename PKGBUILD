@@ -8,6 +8,7 @@ license=('MIT' 'GPL')
 depends=('gtk4' 'glib2' 'glibc')
 makedepends=('rust' 'cargo' 'pkg-config' 'glib2' 'gtk4')
 source=("git+https://github.com/captaincarmnlg/disipline-tracker.git")
+sha256sums=('SKIP')
 noextract=()
 
 build() {
