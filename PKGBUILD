@@ -12,16 +12,13 @@ sha256sums=('SKIP')
 noextract=()
 
 build() {
-    cd "$srcdir"
-    cargo install --path . --root "$pkgdir/usr" --locked
+    cd "$srcdir/disipline-tracker"
+      cargo build --release
 }
 
 package() {
-    cd "$srcdir"
-
-    # Optional: install a .desktop file
+    cd "$srcdir/disipline-tracker"
+    install -Dm755 target/release/disipline-tracker "$pkgdir/usr/bin/disipline-tracker"
     install -Dm644 data/disipline-tracker.desktop "$pkgdir/usr/share/applications/disipline-tracker.desktop"
-    
-    # Optional: install an icon if you have one
     install -Dm644 data/icon.png "$pkgdir/usr/share/icons/hicolor/128x128/apps/disipline-tracker.png"
 }
