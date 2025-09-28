@@ -3,11 +3,11 @@ pkgver=0.1.0
 pkgrel=1
 pkgdesc="Pomodoro and productivity tracker written in Rust with GTK4"
 arch=('x86_64')
-url="https://github.com/captaincarmnlg/disipline-tracker.git"
+url="https://github.com/captaincarmnlg/disipline-tracker"
 license=('MIT' 'GPL')
 depends=('gtk4' 'glib2' 'glibc')
 makedepends=('rust' 'cargo' 'pkg-config' 'glib2' 'gtk4')
-source=()
+source=("git+https://github.com/captaincarmnlg/disipline-tracker.git")
 noextract=()
 
 build() {
