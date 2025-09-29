@@ -265,7 +265,6 @@ fn build_ui(app: &Application) {
         }
     });
 
-    audio::play_complete_sound();
     // Controls
     let controls = GtkBox::new(Orientation::Horizontal, 6);
     let start_btn = Button::with_label("Start");
