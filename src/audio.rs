@@ -11,7 +11,7 @@ pub fn play_complete_sound() {
     let cursor = Cursor::new(COMPLETE_SOUND);
     let source = Decoder::try_from(cursor).unwrap();
     sink.append(source);
-    sink.sleep_until_end();
+    sink.detach();
 }
 
 #[test]

@@ -1,5 +1,5 @@
 pkgname=disipline-tracker-git
-pkgver=0.1.4
+pkgver=0.1.5
 pkgrel=1
 pkgdesc="Pomodoro and productivity tracker written in Rust with GTK4"
 arch=('x86_64')
