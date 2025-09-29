@@ -1,8 +1,5 @@
-use crate::APP_NAME;
-use dirs::data_local_dir;
 use rodio::{Decoder, OutputStreamBuilder, Sink};
 use std::io::Cursor;
-use std::path::PathBuf;
 
 const COMPLETE_SOUND: &[u8] = include_bytes!("../data/sounds/complete.ogg");
 
