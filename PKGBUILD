@@ -21,4 +21,5 @@ package() {
     install -Dm755 target/release/disipline-tracker "$pkgdir/usr/bin/disipline-tracker"
     install -Dm644 data/disipline-tracker.desktop "$pkgdir/usr/share/applications/disipline-tracker.desktop"
     install -Dm644 data/icon.png "$pkgdir/usr/share/icons/hicolor/128x128/apps/disipline-tracker.png"
+    install -Dm644 data/sounds/* "$pkgdir/usr/share/disipline-tracker/sounds/"
 }

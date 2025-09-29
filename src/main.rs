@@ -20,6 +20,8 @@ use std::path::PathBuf;
 use std::fs::OpenOptions;
 use std::io::Write;
 
+mod audio;
+
 const WORK_SECONDS: i32 = 25 * 60;
 const SHORT_BREAK_SECONDS: i32 = 5 * 60;
 const LONG_BREAK_SECONDS: i32 = 15 * 60;
@@ -448,6 +450,7 @@ fn complete_session_internal(
         let day = Local::today().naive_local();
         *s.contributions.entry(day).or_insert(0) += 1;
         heatmap.queue_draw();
+        audio::play_complete_sound();
         if s.work_sessions % 4 == 0 {
             s.reset(Mode::Long);
         } else {
